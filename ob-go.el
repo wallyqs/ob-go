@@ -152,9 +152,11 @@ support for sessions"
 
 (defun org-babel-go-ensure-main-wrap (body)
   "Check to see if main is already defined. If not, add it."
-  (if (string-match-p "^[ \t]*func main *() *{" body)
-      body
-    (concat "func main() {\n" body "\n}\n")))
+  ;; (if (string-match-p "^[ \t]*func main *() *{" body)
+  ;;     body
+  ;;   (concat "func main() {\n" body "\n}\n"))
+  body
+  )
 
 (defun org-babel-go-append-package (package)
   "Check to see if package is set. If not, add main."
